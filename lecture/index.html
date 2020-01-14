@@ -32,13 +32,16 @@
       }
 
       render() {
-        return <button type="submit" onClick={() => {this.setState({ liked: true })}}>Like</button>;
+        return <button type="submit" onClick={() => {this.setState({ liked: true })}}>
+            {this.state.liked === true ? 'Liked' : 'Like'}
+          </button>;
+        // JSX (JS + XML)
       }
     }
   </script>
   <script type="text/babel">
     // LikeButton 컴포넌트를 #root에 그려라
-    ReactDOM.render(<LikeButton />, document.querySelector('#root'));
+    ReactDOM.render(<div><LikeButton /><LikeButton /><LikeButton /></div>, document.querySelector('#root'));
   </script>
 </body>
 </html>
