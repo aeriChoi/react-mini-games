@@ -10,9 +10,17 @@
 </head>
 <body>
   <div id="root"></div>
+  <!--  예상 결과
+    <div id="root">
+      <button>Like</button>
+    </div>
+  -->
+
   <script>
+    // 엘리먼트 생성
     const e = React.createElement;
 
+    // 리액트 버튼 컴포넌트 생성
     class LikeButton extends React.Component {
       constructor(props) {
         super(props);
@@ -24,6 +32,7 @@
     }
   </script>
   <script>
+    // LikeButton 컴포넌트를 #root에 그려라
     ReactDOM.render(e(LikeButton), document.querySelector('#root'));
   </script>
 </body>
